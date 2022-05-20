@@ -17,6 +17,9 @@ const Header = () => {
           <Li>Comedy</Li>
         </Ul>
       </nav>
+      <Link to="/WishList">
+        <Button>WatchList</Button>
+      </Link>
       <Link to="/Top">
         <Button>Top Rated</Button>
       </Link>

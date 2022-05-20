@@ -13,7 +13,6 @@ const Top = () => {
   const addPage = () => {
     setPage(page + 1);
   };
-  //const body = `https://api.themoviedb.org/3/movie/top_rated?api_key=93707bbd999b76530426a2e36710f747&page=${page}&with_genres=${genreId}`;
 
   useEffect(() => {
     // fetchData(page);
@@ -29,7 +28,7 @@ const Top = () => {
     <Main>
       <Load onClick={addPage}>Next</Load>
       {movies.map((item, index) => {
-        return <Movie key={item.id} {...item} />;
+        return <Movie key={item.id} movie={item} />;
       })}
     </Main>
   );

@@ -55,7 +55,7 @@ const Button = styled.button`
   margin-left: 150px;
 `;
 const Main = styled.div`
-  background-color: blue; ;
+  background-color: #22254b;
 `;
 const Img = styled.img`
   max-width: 50%;

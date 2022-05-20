@@ -22,7 +22,7 @@ const Trending = () => {
       </P>
       {movies.length > 0 &&
         movies.map((movie) => {
-          return <Movie key={movie.id} {...movie} />;
+          return <Movie key={movie.id} movie={movie} />;
         })}
     </Main>
   );

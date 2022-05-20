@@ -98,8 +98,30 @@ const getUpcoming = async (req, res) => {
   }
 };
 
+//Now playing movies
+const getPlaying = async (req, res) => {
+  const { page } = req.query;
+  const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${REACT_APP_API_KEY}&language=en-US&page=${page}`;
+  try {
+    fetch(url)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        return res.status(200).json({
+          status: 200,
+          data: data.results,
+          message: "Success",
+        });
+      });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 //search movie
-//const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=93707bbd999b76530426a2e36710f747&query="${searchValue}"`;
+
 const getSearch = async (req, res) => {
   const searchValue = req.query.query; //object
 
@@ -110,7 +132,6 @@ const getSearch = async (req, res) => {
         return res.json();
       })
       .then((data) => {
-        //console.log(searchValue);
         return res.status(200).json({
           status: 200,
           data: data.results,
@@ -195,16 +216,19 @@ const getSingleUser = async (req, res) => {
   const db = client.db("Users");
   //await
   const result = await db.collection("Users").findOne({ email: email });
-  //const result = await db.collection("Users").find({ email }).toArray();
-  console.log(result);
-  if (result) {
-    if (result.password === password) {
-      res.status(200).json({
-        status: 200,
-        data: result,
-        message: "Success",
-      });
-    }
+  //const result2 = await db.collection("Users").find({ email }).toArray();
+  //console.log(result2);
+  console.log(password);
+  console.log(result.email);
+  console.log(email);
+  // if (result) {
+  if (result.password === password && result.email === email) {
+    res.status(200).json({
+      status: 200,
+      data: result,
+      message: "Success",
+    });
+    // }
   } else {
     res.status(404).json({
       status: 404,
@@ -335,4 +359,5 @@ module.exports = {
   getUpcoming,
   getSearch,
   getActors,
+  getPlaying,
 };

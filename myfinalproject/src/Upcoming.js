@@ -21,7 +21,7 @@ const Upcoming = () => {
     <Main>
       <Load onClick={addPage}>Next</Load>
       {movies.map((item, index) => {
-        return <Movie key={item.id} {...item} />;
+        return <Movie key={item.id} movie={item} />;
       })}
     </Main>
   );

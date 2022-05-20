@@ -31,7 +31,8 @@ const SignIn = () => {
   // }, [currentUser.email]);
 
   const logIn = async () => {
-    setError("");
+    //async
+    setError(" ");
     try {
       const logged = await fetch(`http://localhost:8000/user`, {
         method: "POST",
@@ -42,13 +43,18 @@ const SignIn = () => {
         body: JSON.stringify(currentUser),
       });
       const json = await logged.json();
-
-      console.log(json.data);
+      setError(json.message);
+      //   console.log(json);
       if (json.status === 200) {
         //if the status is confirmed
+        //redirect("/Main");
+        console.log("success");
+
+        window.alert("Welcome to the Movie Database ");
         redirect("/Main");
-      } else {
+      } else if (json.status === 404) {
         setError(json.message);
+        console.log(error);
         //console.log();
       }
     } catch (err) {
@@ -56,11 +62,15 @@ const SignIn = () => {
     }
   };
 
-  console.log(currentUser.email);
+  console.log(currentUser);
   const handleClick = (e) => {
-    e.preventDefault();
     logIn();
-    // window.alert("Welcome to the Movie Database ");
+
+    e.preventDefault();
+
+    //window.alert("Welcome to the Movie Database ");
+    //redirect("/Main");
+    //
 
     //setSignIn(true);
     ///setCurrenUser("user");
@@ -68,7 +78,7 @@ const SignIn = () => {
   };
   return (
     <Container>
-      <Form>
+      <Form method="POST">
         <h3>Sign In</h3>
         <label htmlFor="email">Email</label>
         <Input

@@ -17,7 +17,6 @@ const Homepage = () => {
     <>
       <H1>WELCOME TO MY MOVIE DATABASE </H1>
       <Wrapper>
-        <Img src={cinema} />
         <Link to="/SignUp">
           <Button>Sign up</Button>
         </Link>
@@ -27,6 +26,16 @@ const Homepage = () => {
         <Link to="/SignIn">
           <Button>Sign In</Button>
         </Link>
+        <Img src={cinema} />
+        <iframe
+          width="550"
+          height="380"
+          src="https://www.youtube.com/embed/lsgSGHyXRiE?autoplay=1"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
+          allowFullScreen
+        ></iframe>
         <SignOut />
       </Wrapper>
       <p></p>
@@ -44,7 +53,8 @@ const Button = styled.button`
 `;
 
 const Img = styled.img`
-  height: 1000px;
+  max-width: 50%;
+  //height: 1000px;
 `;
 const H1 = styled.h1`
   color: black;

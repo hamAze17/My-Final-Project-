@@ -5,7 +5,7 @@ import cinema from "../src/images/cinema.jpg";
 import { useNavigate } from "react-router-dom";
 
 const FeedBack = () => {
-  const [error, setError] = React.useState(false);
+  const [error, setError] = useState(false);
   const [feedBackInfo, setFeedBackInfo] = useState({
     firstName: "",
     lastName: "",
@@ -16,7 +16,7 @@ const FeedBack = () => {
   //add a new feedback
   const addFeedback = async () => {
     try {
-      const feedback = await fetch(`http://localhost:8000/feedback/${1}`, {
+      const feedback = await fetch(`http://localhost:8000/feedback/`, {
         method: "POST",
         headers: {
           Accept: "application/json",
