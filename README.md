@@ -8,13 +8,22 @@ All the users reviews are added into the database .
 
 ﻿Technologies used :
  -HTML
+ 
+ 
  -CSS
+ 
  -Javascript
+ 
  -React.js
+ 
  -API
+ 
  -Node.js
+ 
  -LocalStorage
+ 
  -MongoDB
+ 
  
  How the project works ?: 
  
@@ -25,14 +34,18 @@ All the users reviews are added into the database .
  -Understanding the API was really a challenge to deal with 
  because i could not understand it but the Positive about the experience 
  I will be able to understand other API's more easily
+ 
  -Making ideas into the WebApplication was also a challenge 
  besause a lot of my ideas did not match the API 
+ 
  -CSS 
  
  What can i make better:
  -Choosing a better API
  
+ 
  -CSS adding more styling 
+ 
  
  -Adding more functionalities
  
