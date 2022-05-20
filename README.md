@@ -7,6 +7,7 @@ Users can log in and add their feedbacks mentionning what they liked and if they
 All the users reviews are added into the database .
 
 ﻿Technologies used :
+ 
  -HTML
  
  
@@ -31,6 +32,7 @@ All the users reviews are added into the database .
  
  
  Challenges :
+ 
  -Understanding the API was really a challenge to deal with 
  because i could not understand it but the Positive about the experience 
  I will be able to understand other API's more easily
@@ -41,6 +43,7 @@ All the users reviews are added into the database .
  -CSS 
  
  What can i make better:
+ 
  -Choosing a better API
  
  
