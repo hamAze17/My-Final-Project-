@@ -12,11 +12,12 @@ import { Link } from "react-router-dom";
 import Genre from "./Genre";
 import { useContext } from "react";
 import { WatchContext } from "./WatchContext";
+import Latest from "./Latest";
 
 const Main = () => {
   //getgenres
 
-  const { fav, setFav } = useContext(WatchContext);
+  const { currentUser, setCurrentUser } = useContext(WatchContext);
 
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
@@ -50,12 +51,12 @@ const Main = () => {
       .then((data) => {
         console.log(data);
         setMovies(data.data);
-        const getFav = () => {
-          data.data.map((movie) => {
-            return movie;
-          });
-        };
-        setFav(getFav);
+        // const getFav = () => {
+        //   data.data.map((movie) => {
+        //     return movie;
+        //   });
+        // };
+        // setFav(getFav);
       });
   }, [page]); //page
 
@@ -94,19 +95,11 @@ const Main = () => {
           onChange={handleChange}
         />
         <Button onClick={searchMovie}>search</Button>
-        <MenuBar />
+        {/* <MenuBar /> */}
+        <Latest />
         <Header />
         <Genre />
       </form>
-      <iframe
-        width="550"
-        height="380"
-        src="https://www.youtube.com/embed/lsgSGHyXRiE?autoplay=1"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
-        allowFullScreen
-      ></iframe>
       {/* <video width="400" controls>
         <source src={fox} />
       </video> */}

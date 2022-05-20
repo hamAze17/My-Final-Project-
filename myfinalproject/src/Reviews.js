@@ -35,7 +35,7 @@ const Main = styled.div`
   overflow: auto;
 `;
 const Wrapper = styled.div`
-  background-color: orange;
+  background-color: #22254b;
   border: 4px var(--color-alabama-crimson) solid;
 `;
 const Title = styled.h2`

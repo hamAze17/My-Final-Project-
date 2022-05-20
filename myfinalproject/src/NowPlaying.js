@@ -5,25 +5,23 @@ import styled from "styled-components";
 const NowPlaying = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
-  const body = `https://api.themoviedb.org/3/movie/upcoming?api_key=93707bbd999b76530426a2e36710f747&language=en-US&page=${page}`;
 
   const addPage = () => {
     setPage(page + 1);
   };
 
   useEffect(() => {
-    fetch(body)
+    fetch(`http://localhost:8000/playing?page=${page}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        setMovies(data.results);
+        setMovies(data.data);
       });
   }, [page]);
   return (
     <Container>
       <Load onClick={addPage}>Next</Load>
       {movies.map((item, index) => {
-        return <Movie key={item.id} {...item} />;
+        return <Movie key={item.id} movie={item} />;
       })}
     </Container>
   );
@@ -48,6 +46,7 @@ const Load = styled.button`
   color: #fff;
   display: flex;
   padding: 12px 0;
+  margin-left: 150px;
 `;
 
 export default NowPlaying;

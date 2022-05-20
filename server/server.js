@@ -17,6 +17,7 @@ const {
   getUpcoming,
   getSearch,
   getActors,
+  getPlaying,
 } = require("./handlers");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -96,6 +97,7 @@ app.get("/movies", getMovies);
 app.get("/top", getTop);
 app.get("/trending", getTrending);
 app.get("/upcoming", getUpcoming);
+app.get("/playing", getPlaying);
 app.get("/search", getSearch);
 app.get("/actors/:id", getActors);
 
