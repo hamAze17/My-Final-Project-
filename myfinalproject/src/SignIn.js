@@ -48,7 +48,7 @@ const SignIn = () => {
       if (json.status === 200) {
         //if the status is confirmed
         //redirect("/Main");
-
+        setSignIn("Success");
         window.alert("Welcome to the Movie Database ");
         redirect("/Main");
       } else if (json.status === 404) {
@@ -59,7 +59,6 @@ const SignIn = () => {
     }
   };
 
-  console.log(currentUser);
   const handleClick = (e) => {
     logIn();
 
@@ -123,7 +122,7 @@ const SignIn = () => {
         <Button onClick={handleClick}>Log In</Button>
       </Form>
       <Error>{error}</Error>
-      <SignOut />
+      {/* <SignOut /> */}
     </Container>
   );
 };

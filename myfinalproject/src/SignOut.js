@@ -14,18 +14,26 @@ const SignOut = () => {
   };
   return (
     <Container>
-      <button onClick={handleLogOut}>Sign Out</button>
+      <Button onClick={handleLogOut}>Sign Out</Button>
     </Container>
   );
 };
+
+const Button = styled.button`
+  background-color: #ff7a00;
+`;
+
 const Container = styled.div`
   display: flex;
   justify-content: center;
   text-decoration: none;
-  position: absolute;
+  //position: absolute;
   width: 120px;
-  color: purple;
+  color: white;
   align-items: center;
-  top: -5px;
+  //top: -5px;
+  margin-left: 500px;
+  //justify-content: space-between;
+  background-color: orange;
 `;
 export default SignOut;

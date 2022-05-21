@@ -4,6 +4,8 @@ import styled from "styled-components";
 import Main from "./Main";
 import FeedBack from "./FeedBack";
 import { WatchContext } from "./WatchContext";
+import { UserContext } from "./UserContext";
+import SignIn from "./SignIn";
 
 const Movie = ({ movie }) => {
   const IMG_API = "https://image.tmdb.org/t/p/w1280/";
@@ -19,6 +21,7 @@ const Movie = ({ movie }) => {
 
   //USING THE WATCHLIST CONTEXT
   const { watchList, addToWatchList, setFav, fav } = useContext(WatchContext);
+  const { currentUser, signIn, setSignIn } = useContext(UserContext);
 
   const addFavoriteMovie = (movietest) => {
     addToWatchList(movietest);
@@ -35,9 +38,13 @@ const Movie = ({ movie }) => {
   }
   return (
     <Wrapper>
-      <Link to="/FeedBack">
+      {currentUser.firstName ? (
+        <Link to="/FeedBack">
+          <h1>{title}</h1>
+        </Link>
+      ) : (
         <h1>{title}</h1>
-      </Link>
+      )}
 
       <Img src={IMG_API + poster_path} alt={title} />
       <h2>Release Date: </h2>

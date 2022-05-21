@@ -13,9 +13,13 @@ import Genre from "./Genre";
 import { useContext } from "react";
 import { WatchContext } from "./WatchContext";
 import Latest from "./Latest";
+import { UserContext } from "./UserContext";
+import SignIn from "./SignIn";
+import SignOut from "./SignOut";
 
 const Main = () => {
-  const { currentUser, setCurrentUser } = useContext(WatchContext);
+  //const { currentUser, setCurrentUser } = useContext(WatchContext);
+  const { signIn, setSignIn } = useContext(UserContext);
 
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
@@ -79,6 +83,8 @@ const Main = () => {
           onChange={handleChange}
         />
         <Button onClick={searchMovie}>search</Button>
+        {/* {SignIn ? <SignOut /> : " "} */}
+        {signIn && <SignOut />}
 
         <Latest />
         <Header />
