@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Movie from "./Movie";
 import styled from "styled-components";
+import Header from "./Header";
 const Upcoming = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
@@ -13,12 +14,12 @@ const Upcoming = () => {
     fetch(`http://localhost:8000/upcoming?page=${page}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setMovies(data.data);
       });
   }, [page]);
   return (
     <Main>
+      <Header />
       <Load onClick={addPage}>Next</Load>
       {movies.map((item, index) => {
         return <Movie key={item.id} movie={item} />;
@@ -27,7 +28,7 @@ const Upcoming = () => {
   );
 };
 const Main = styled.div`
-  background-color: green;
+  background-color: #22254b;
 `;
 
 const Load = styled.button`

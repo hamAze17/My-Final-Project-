@@ -15,8 +15,6 @@ import { WatchContext } from "./WatchContext";
 import Latest from "./Latest";
 
 const Main = () => {
-  //getgenres
-
   const { currentUser, setCurrentUser } = useContext(WatchContext);
 
   const [movies, setMovies] = useState([]);
@@ -39,27 +37,16 @@ const Main = () => {
     },
   };
 
-  //const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=93707bbd999b76530426a2e36710f747&query="${searchValue}"`;
-
   useEffect(() => {
-    // const response = await fetch(body);
-    // const moviesResponse = await response.json();
-    // setMovies(moviesResponse);
     //body
     fetch(`http://localhost:8000/movies?page=${page}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setMovies(data.data);
-        // const getFav = () => {
-        //   data.data.map((movie) => {
-        //     return movie;
-        //   });
-        // };
-        // setFav(getFav);
       });
   }, [page]); //page
 
+  // not needed anymore
   const addFavoriteMovie = () => {
     const favoriteList = [...favorites, movies];
     setFavorites(favoriteList);
@@ -68,9 +55,6 @@ const Main = () => {
   const searchMovie = (e) => {
     e.preventDefault();
 
-    // const response = await fetch(body);
-    // const moviesResponse = await response.json();
-    // setMovies(moviesResponse);
     fetch(`http://localhost:8000/search?query=${searchValue}`)
       .then((res) => res.json())
       .then((data) => {
@@ -95,7 +79,7 @@ const Main = () => {
           onChange={handleChange}
         />
         <Button onClick={searchMovie}>search</Button>
-        {/* <MenuBar /> */}
+
         <Latest />
         <Header />
         <Genre />
@@ -115,16 +99,6 @@ const Main = () => {
             return <Movie key={movie.id} movie={movie} />;
           })}
       </Container>
-      {/* <main id="main">
-        <div class="movie">
-          <img src={cinema} />
-          <div className="movie-info">
-            <h3>Movie Title</h3>
-            <span class="green">9</span>
-          </div>
-        </div>
-        <div class="over">Lorem ipsum</div>
-      </main> */}
     </Wrapper>
   );
 };

@@ -44,18 +44,15 @@ const SignIn = () => {
       });
       const json = await logged.json();
       setError(json.message);
-      //   console.log(json);
+
       if (json.status === 200) {
         //if the status is confirmed
         //redirect("/Main");
-        console.log("success");
 
         window.alert("Welcome to the Movie Database ");
         redirect("/Main");
       } else if (json.status === 404) {
         setError(json.message);
-        console.log(error);
-        //console.log();
       }
     } catch (err) {
       return err;
@@ -67,14 +64,6 @@ const SignIn = () => {
     logIn();
 
     e.preventDefault();
-
-    //window.alert("Welcome to the Movie Database ");
-    //redirect("/Main");
-    //
-
-    //setSignIn(true);
-    ///setCurrenUser("user");
-    //redirect("/Main");
   };
   return (
     <Container>

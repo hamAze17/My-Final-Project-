@@ -15,13 +15,11 @@ const getMovies = async (req, res) => {
   const { page } = req.query;
   const url = `https://api.themoviedb.org/3/movie/popular?api_key=${REACT_APP_API_KEY}&language=en-US&page=${page}`;
   try {
-    // console.log(page);
     fetch(url)
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         return res.status(200).json({
           status: 200,
           data: data.results,
@@ -36,13 +34,11 @@ const getMovies = async (req, res) => {
 const getTrending = async (req, res) => {
   const url = `https://api.themoviedb.org/3/trending/all/day?api_key=${REACT_APP_API_KEY}`;
   try {
-    // console.log(page);
     fetch(url)
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         return res.status(200).json({
           status: 200,
           data: data.results,
@@ -64,7 +60,6 @@ const getTop = async (req, res) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         return res.status(200).json({
           status: 200,
           data: data.results,
@@ -86,7 +81,6 @@ const getUpcoming = async (req, res) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         return res.status(200).json({
           status: 200,
           data: data.results,
@@ -108,7 +102,6 @@ const getPlaying = async (req, res) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         return res.status(200).json({
           status: 200,
           data: data.results,
@@ -144,7 +137,7 @@ const getSearch = async (req, res) => {
 };
 
 //actors
-//const body = `https://api.themoviedb.org/3/person/${id}?api_key=93707bbd999b76530426a2e36710f747&language=en-US`;
+
 const getActors = async (req, res) => {
   const id = req.params.id;
   const url = `https://api.themoviedb.org/3/person/${id}?api_key=${REACT_APP_API_KEY}&language=en-US`;
@@ -154,7 +147,6 @@ const getActors = async (req, res) => {
         return res.json();
       })
       .then((data) => {
-        console.log(id);
         return res.status(200).json({
           status: 200,
           data: data,
@@ -172,7 +164,6 @@ const getGenre = async (req, res) => {
   try {
     const listgenre = `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&language=en-US`;
 
-    //console.log(listUsers);
     if (listgenre.length > 0) {
       return res
         .status(200)
@@ -193,7 +184,6 @@ const getUsers = async (req, res) => {
 
     const listUsers = await db.collection("Users").find().toArray();
 
-    //console.log(listUsers);
     if (listUsers.length > 0) {
       return res
         .status(200)
@@ -217,10 +207,7 @@ const getSingleUser = async (req, res) => {
   //await
   const result = await db.collection("Users").findOne({ email: email });
   //const result2 = await db.collection("Users").find({ email }).toArray();
-  //console.log(result2);
-  console.log(password);
-  console.log(result.email);
-  console.log(email);
+
   // if (result) {
   if (result.password === password && result.email === email) {
     res.status(200).json({
@@ -263,13 +250,13 @@ const getFeedback = async (req, res) => {
 const deleteUser = async (req, res) => {
   const info = req.body;
   const _id = req.params._id;
-  console.log({ _id });
+
   try {
     const client = new MongoClient(MONGO_URI, options);
     await client.connect();
     const db = client.db("Users");
     const result = await db.collection("Users").deleteOne({ _id });
-    console.log(result);
+
     if (result.deletedCount === 1) {
       res.status(204).json({
         status: 204,
@@ -330,7 +317,7 @@ const addFeedback = async (req, res) => {
     email: feed.email,
     feedBack: feed.feedBack,
   };
-  console.log(dataFeed);
+
   const result = db.collection("FeedBack").insertOne(dataFeed);
   if (result) {
     return res.status(200).json({

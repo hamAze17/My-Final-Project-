@@ -36,7 +36,7 @@ const Container = styled.div`
   //background-color: #fff;
   color: #22254b;
   padding: 1rem;
-  //position: absolute;
+  
   bottom: 0;
   left: 0;
   right: 0;
@@ -70,9 +70,7 @@ const Overview = styled.p`
 const Img = styled.img`
   max-width: 100%;
 
-  //width: 300px;
-
-  //margin-left: 400px;
+  
 `;
 
 export default Biography;

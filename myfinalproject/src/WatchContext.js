@@ -21,9 +21,7 @@ export const WatchProvider = ({ children }) => {
 
   //actions
   const addToWatchList = (movie) => {
-    //payload
     dispatch({ type: "ADD-TO-WATCHLIST", movie: movie });
-    //console.log(movie);
   };
 
   return (

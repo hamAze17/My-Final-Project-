@@ -1,6 +1,5 @@
 //saw this idea online
 export default (state, action) => {
-  console.log(action);
   switch (action.type) {
     case "ADD-TO-WATCHLIST":
       //payload

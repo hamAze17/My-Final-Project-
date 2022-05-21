@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Biography from "./Biography";
+import Header from "./Header";
 
 const Actors = () => {
   const [id, setId] = useState(1);
   const [biographies, setBiographies] = useState({});
 
-  //const body = `https://api.themoviedb.org/3/person/${id}?api_key=93707bbd999b76530426a2e36710f747&language=en-US`;
-  //const body = `https://api.themoviedb.org/3/person/${id}?api_key=93707bbd999b76530426a2e36710f747&language=en-US`;
   const addId = () => {
     setId(id + 1);
   };
@@ -16,8 +15,6 @@ const Actors = () => {
     fetch(`http://localhost:8000/actors/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.data);
-        //console.log(API_KEY);
         setBiographies(data.data);
       });
   }, [id]);
@@ -25,6 +22,7 @@ const Actors = () => {
   const IMG_API = "https://image.tmdb.org/t/p/w1280/";
   return (
     <Main>
+      <Header />
       <p>Here are all the biographies of Actors you can find</p>
       <Button onClick={addId}>next</Button>
       <Img src={IMG_API + biographies.profile_path} />
