@@ -53,4 +53,31 @@ All the users reviews are added into the database .
  -Adding more functionalities
  
  
+ .Functionnalities :
+ 
+ -Homepage page 
+ 
+ -Main Page
+ 
+ -Sign Up page
+ 
+ -Sign In page 
+ 
+ -Feedback page 
+ 
+ -Reviews Page 
+ 
+ -Top movies Page
+ 
+ -Upcoming Page
+ 
+ -Now playing Page
+ 
+ -Actors Page
+ 
+ -Trending page
+ 
+ -WishList page
+ 
+ 
  
