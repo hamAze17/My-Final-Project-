@@ -233,7 +233,6 @@ const getFeedback = async (req, res) => {
 
     const listFeed = await db.collection("FeedBack").find().toArray();
 
-    console.log(listFeed);
     if (listFeed.length > 0) {
       return res
         .status(200)

@@ -2,7 +2,7 @@ import React, { useState, createContext } from "react";
 
 export const UserContext = createContext();
 export const UserProvider = ({ children }) => {
-  const [signIn, setSignIn] = useState(false);
+  const [signIn, setSignIn] = useState(""); //false
   const [currentUser, setCurrentUser] = useState({
     firstName: "",
     lastName: "",
