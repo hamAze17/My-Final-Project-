@@ -136,9 +136,6 @@ const Container = styled.div`
   //color: #22254b; //#efefee;
   //display: flex;
   height: 100vh;
-  //align-items:center;
-  //justify-content:center;
-  //margin-left: 150px;
 `;
 const Button = styled.button`
   background-color: red;

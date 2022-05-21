@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-dom";
 import styled from "styled-components";
+import Header from "./Header";
 import Movie from "./Movie";
-//import { fetchTopRatedMovies } from "../../server/server;
 
 const Top = () => {
   const [page, setPage] = useState(1);
@@ -15,8 +15,6 @@ const Top = () => {
   };
 
   useEffect(() => {
-    // fetchData(page);
-    // setMovies(moviesResponse);
     fetch(`http://localhost:8000/top?page=${page}`)
       .then((res) => res.json())
       .then((data) => {
@@ -26,6 +24,7 @@ const Top = () => {
 
   return (
     <Main>
+      <Header />
       <Load onClick={addPage}>Next</Load>
       {movies.map((item, index) => {
         return <Movie key={item.id} movie={item} />;
@@ -34,7 +33,7 @@ const Top = () => {
   );
 };
 const Main = styled.div`
-  background-color: blue;
+  background-color: #22254b;
 `;
 
 const Load = styled.button`

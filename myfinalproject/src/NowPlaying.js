@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Movie from "./Movie";
 import styled from "styled-components";
+import Header from "./Header";
 
 const NowPlaying = () => {
   const [movies, setMovies] = useState([]);
@@ -19,6 +20,7 @@ const NowPlaying = () => {
   }, [page]);
   return (
     <Container>
+      <Header />
       <Load onClick={addPage}>Next</Load>
       {movies.map((item, index) => {
         return <Movie key={item.id} movie={item} />;

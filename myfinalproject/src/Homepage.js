@@ -17,44 +17,68 @@ const Homepage = () => {
     <>
       <H1>WELCOME TO MY MOVIE DATABASE </H1>
       <Wrapper>
-        <Link to="/SignUp">
-          <Button>Sign up</Button>
-        </Link>
-        <Link to="/Main">
-          <Button>Main</Button>
-        </Link>
-        <Link to="/SignIn">
-          <Button>Sign In</Button>
-        </Link>
-        <Img src={cinema} />
-        <iframe
-          width="550"
+        <Container>
+          <Link to="/SignUp">
+            <Button>Sign up</Button>
+          </Link>
+          <Link to="/Main">
+            <Button>Main</Button>
+          </Link>
+          <Link to="/SignIn">
+            <Button>Sign In</Button>
+          </Link>
+        </Container>
+        {/* <Img src={cinema} /> */}
+        <Iframe
+          width="1500"
           height="380"
-          src="https://www.youtube.com/embed/lsgSGHyXRiE?autoplay=1"
+          src="https://www.youtube.com/embed/lsgSGHyXRiE?autoplay=1&loop=1&playlist=lsgSGHyXRiE"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
           allowFullScreen
-        ></iframe>
-        <SignOut />
+        ></Iframe>
+        <Img src={cinema} />
       </Wrapper>
       <p></p>
-      <Img src={img1} />
+
       <Footer />
     </>
   );
 };
+const Container = styled.div`
+  //padding: 100px;
+  display: flex;
+  //margin: 10px;
+  justify-content: space-between;
+  background-color: #e50914;
+`;
+const Iframe = styled.iframe``;
 const Wrapper = styled.div`
-  background-image: url(cinema);
+  background-image: url("img1.jpg");
+  flex-wrap: wrap;
 `;
 const Button = styled.button`
-  color: yellow;
-  margin-left: 350px;
+  //display: flex;
+  //margin-left: 1500px;
+
+  width: 120px;
+  height: 50px;
+  background: #ff7a00;
+  color: #fff;
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 3px;
+  //color: yellow;
+  //margin-left: 350px;
 `;
 
 const Img = styled.img`
-  max-width: 50%;
-  //height: 1000px;
+  //max-width: 50%;
+  height: 2000px;
+  //width: 100px;
+  //1100px;; ;
 `;
 const H1 = styled.h1`
   color: black;

@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 //react -icons
 const Header = () => {
   return (
-    <div>
-      <nav>
+    <Wrapper>
+      {/* <nav>
         <Ul>
           <Li>
             <FaBeer />
@@ -16,7 +16,7 @@ const Header = () => {
           <Li>Romance</Li>
           <Li>Comedy</Li>
         </Ul>
-      </nav>
+      </nav> */}
       <Link to="/WishList">
         <Button>WatchList</Button>
       </Link>
@@ -38,9 +38,12 @@ const Header = () => {
       <Link to="/Upcoming">
         <Button>Upcoming movies</Button>
       </Link>
-    </div>
+    </Wrapper>
   );
 };
+const Wrapper = styled.div`
+  background-color: #22254b;
+`;
 
 const Button = styled.button`
   width: 100%;

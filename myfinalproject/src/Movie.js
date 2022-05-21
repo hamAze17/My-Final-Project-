@@ -49,7 +49,6 @@ const Movie = ({ movie }) => {
       <h2>Genres:</h2>
       <P>
         {genre_ids.map((id) => {
-          //console.log(id);
           return getGenre(id);
         })}
       </P>
@@ -157,9 +156,6 @@ const Vote = styled.div`
   margin-left: 100px;
 `;
 const Wrapper = styled.div`
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
   width: 300px;
   margin: 16px;
 
@@ -177,10 +173,6 @@ const Overview = styled.p`
 `;
 const Img = styled.img`
   max-width: 100%;
-
-  //width: 300px;
-
-  //margin-left: 400px;
 `;
 
 export default Movie;

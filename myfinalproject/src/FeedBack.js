@@ -105,11 +105,7 @@ const FeedBack = () => {
         >
           Feedback
         </textarea> */}
-        <span className="star"></span>
-        <span className="star"></span>
-        <span className="star"></span>
-        <span className="star"></span>
-        <span className="star"></span>
+
         {/* <Input type="file" /> */}
         <button onClick={handleClick}>Submit</button>
       </Form>
