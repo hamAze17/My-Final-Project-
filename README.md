@@ -23,7 +23,8 @@ The user can also add a movie into the wishlist
 -See all the reviews from MongoDB database
 
 
-﻿## Tech used for project  :
+
+## Tech used for project  :
  
  -HTML
  
@@ -43,11 +44,12 @@ The user can also add a movie into the wishlist
  -MongoDB
  
  
- How the project works ?: 
+ 
  
  
  
  ## Reflection:
+ 
  Challenges :
  
  -Understanding the API was really a challenge to deal with 
