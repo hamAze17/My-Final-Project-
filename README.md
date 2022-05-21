@@ -1,12 +1,29 @@
 ﻿# My-Final-Project-
-Movie library website
-My final project will be a full stack website that will have all kind of movies (hundreds of movies), basically a library of movies (like IMDB or Netflix)
-It will have the actor for each movie, as well as their biographies(DOB,biography)
+ 
+## Description:
+My final project is a full stack website that have all kind of movies (hundreds of movies), basically a library of movies (like IMDB or Netflix)
+It have the actor for all the movies, as well as their biographies(DOB,biography) as well as the top movies ,most popular ,trending and nowplaying movies
 
 Users can log in and add their feedbacks mentionning what they liked and if they have any suggestions.
 All the users reviews are added into the database .
+The user can also add a movie into the wishlist
 
-﻿Technologies used :
+## Features:
+
+-Sign Up and Login 
+
+-Search bar 
+
+- wish list and localstorage
+
+- Add Feedback
+
+-display all actors
+
+-See all the reviews from MongoDB database
+
+
+﻿## Tech used for project  :
  
  -HTML
  
@@ -30,7 +47,7 @@ All the users reviews are added into the database .
  
  
  
- 
+ ## Reflection:
  Challenges :
  
  -Understanding the API was really a challenge to deal with 
@@ -52,8 +69,8 @@ All the users reviews are added into the database .
  
  -Adding more functionalities
  
+ ## Functionalities:
  
- .Functionnalities :
  
  -Homepage page 
  
@@ -80,4 +97,12 @@ All the users reviews are added into the database .
  -WishList page
  
  
+ ## Next steps:
+
+-Allow users to sign in from Google
+
+-Enable more data manipulation in the database
+
+-Incorporate additional styling across the project
+
  
