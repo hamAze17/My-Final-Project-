@@ -1,5 +1,7 @@
-My-Final-Project-
-Description:
+##My-Final-Project-
+
+#Description:
+
 My final project is a full stack website that have all kind of movies (hundreds of movies), basically a library of movies (like IMDB or Netflix) It have the actor for all the movies, as well as their biographies(DOB,biography) as well as the top movies ,most popular ,trending and nowplaying movies
 
 Users can log in and add their feedbacks mentionning what they liked and if they have any suggestions. All the users reviews are added into the database . The user can also add a movie into the wishlist
