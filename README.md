@@ -51,8 +51,10 @@ Functionalities: -Homepage page
 -WishList page
 
 #Screenshots:
+ ![](myfinalproject/src/images/reviews.png)
 
-Next steps:
+
+
 
 Next steps:-Allow users to sign in from Google
 
