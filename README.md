@@ -52,10 +52,56 @@ Functionalities: -Homepage page
 
 #Screenshots:
 
+Homepage:
+
+![](myfinalproject/src/images/homepage.png)
+
+
+Main
+
+![](myfinalproject/src/images/main2.png)
+
+
+Actors
+
+![](myfinalproject/src/images/actors.png)
+
+
+Reviews
+
 ![](myfinalproject/src/images/reviews.png)
 
 
-Next steps:-Allow users to sign in from Google
+SignUp
+
+![](myfinalproject/src/images/Signup.png)
+
+
+SignIn
+
+![](myfinalproject/src/images/SignIn.png)
+
+
+WishList
+
+![](myfinalproject/src/images/wishlist.png)
+
+
+Upcoming Movies
+
+![](myfinalproject/src/images/Upcoming.png)
+
+
+Now Playing Movies
+
+![](myfinalproject/src/images/Nowplaying.png)
+
+
+
+#Next steps:
+
+
+-Allow users to sign in from Google
 
 -Enable more data manipulation in the database
 
