@@ -1,4 +1,4 @@
-##My-Final-Project-
+##Final Project
 
 #Description:
 
@@ -7,6 +7,7 @@ My final project is a full stack website that have all kind of movies (hundreds 
 Users can log in and add their feedbacks mentionning what they liked and if they have any suggestions. All the users reviews are added into the database . The user can also add a movie into the wishlist
 
 Features:
+
 -Sign Up and Login
 
 -Search bar
@@ -20,6 +21,7 @@ Add Feedback
 -See all the reviews from MongoDB database
 
 Tech used for project :
+
 -HTML
 
 -CSS
@@ -37,6 +39,7 @@ Tech used for project :
 -MongoDB
 
 Reflection:
+
 Challenges :
 
 -Understanding the API was really a challenge to deal with because i could not understand it but the Positive about the experience I will be able to understand other API's more easily
@@ -45,7 +48,9 @@ Challenges :
 
 -CSS
 
+
 What can i make better:
+
 
 -Choosing a better API
 
@@ -54,6 +59,7 @@ What can i make better:
 -Adding more functionalities
 
 Functionalities:
+
 -Homepage page
 
 -Main Page
@@ -78,7 +84,9 @@ Functionalities:
 
 -WishList page
 
+
 Next steps:
+
 -Allow users to sign in from Google
 
 -Enable more data manipulation in the database
