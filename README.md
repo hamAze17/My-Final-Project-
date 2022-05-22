@@ -58,6 +58,8 @@ Tech used for project :
 
 -Adding more functionalities
 
+
+
 #Functionalities:
 
 -Homepage page
@@ -83,6 +85,8 @@ Tech used for project :
 -Trending page
 
 -WishList page
+
+
 
 
 #Next steps:
