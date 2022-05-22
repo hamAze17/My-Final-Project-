@@ -12,9 +12,9 @@ Features:
 
 -Search bar
 
-wish list and localstorage
+-wish list and localstorage
 
-Add Feedback
+-Add Feedback
 
 -display all actors
 
@@ -38,9 +38,9 @@ Tech used for project :
 
 -MongoDB
 
-Reflection:
 
-Challenges :
+
+#Challenges :
 
 -Understanding the API was really a challenge to deal with because i could not understand it but the Positive about the experience I will be able to understand other API's more easily
 
@@ -49,7 +49,7 @@ Challenges :
 -CSS
 
 
-What can i make better:
+#What can i make better:
 
 
 -Choosing a better API
@@ -58,7 +58,7 @@ What can i make better:
 
 -Adding more functionalities
 
-Functionalities:
+#Functionalities:
 
 -Homepage page
 
@@ -85,7 +85,7 @@ Functionalities:
 -WishList page
 
 
-Next steps:
+#Next steps:
 
 -Allow users to sign in from Google
 
