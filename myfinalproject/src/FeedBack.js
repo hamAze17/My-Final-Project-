@@ -107,13 +107,16 @@ const FeedBack = () => {
         </textarea> */}
 
         {/* <Input type="file" /> */}
-        <button onClick={handleClick}>Submit</button>
+        <Button onClick={handleClick}>Submit</Button>
       </Form>
       {error && <div>Feedback Not processed! try Again!</div>}
     </Container>
   );
 };
 
+const Button = styled.button`
+  background-color: #ff7a00;
+`;
 const Input = styled.input`
   margin-bottom: 10px;
 `;
@@ -123,7 +126,7 @@ const Form = styled.form`
   margin: 10px;
   padding: 10px;
   margin-left: 150px;
-  border: 4px solid blue;
+  //border: 4px solid blue;
 `;
 
 const Container = styled.div`
