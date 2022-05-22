@@ -52,7 +52,8 @@ Functionalities: -Homepage page
 
 #Screenshots:
 
-Next steps:
+![](myfinalproject/src/images/reviews.png)
+
 
 Next steps:-Allow users to sign in from Google
 
